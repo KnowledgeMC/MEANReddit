@@ -10,9 +10,10 @@
 </head>
   <body ng-app="MEANReddit" ng-controller="MainCtrl">
 
-    <div>
-        {{test}}
+    <div ng-repeat="post in posts">
+        {{ post.title }} - upvotes: {{ post.upvotes }}
     </div>
+
 
   </body>
 </html>
