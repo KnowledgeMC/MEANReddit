@@ -1,4 +1,4 @@
-var app = angular.module('MEANReddit', []);
+var app = angular.module('MEANReddit', ['ui.router']);
 
 //creating a factory for posts
 
