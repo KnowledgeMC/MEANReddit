@@ -10,19 +10,19 @@ var app = angular.module('MEANReddit', ['ui.router']);
 //that's left to do is define the home.html template. Instead of
 //creating a new file, we are going to move most of our HTML into an inline template.
 
-app.config([
-  '$stateProvider',
-  '$urlRouterProvider',
-  function($stateProvider, $urlRouterProvider){
-    $stateProvider
-      .state('home', {
-        url: '/home',
-        templateUrl: '/home.html',
-        controller: 'MainCtrl'
-      });
+// app.config([
+//   '$stateProvider',
+//   '$urlRouterProvider',
+//   function($stateProvider, $urlRouterProvider){
+//     $stateProvider
+//       .state('home', {
+//         url: '/home',
+//         templateUrl: '/home.html',
+//         controller: 'MainCtrl'
+//       });
 
-    $urlRouterProvider.otherwise('home');
-}]);
+//     $urlRouterProvider.otherwise('home');
+// }]);
 
 
 //Creating a factory for posts:
