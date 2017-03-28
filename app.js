@@ -16,14 +16,15 @@ app.factory('posts', [function(){
 
 app.controller('MainCtrl', [
 '$scope',
-function($scope){
-  $scope.posts = [
-    {title: 'post 1', upvotes: 5},
-    {title: 'post 2', upvotes: 3},
-    {title: 'post 3', upvotes: 22},
-    {title: 'post 4', upvotes: 8},
-    {title: 'post 5', upvotes: 12}
-  ];
+'posts', //Inject posts service into the controller
+function($scope, posts){ //Inject posts service into the controller
+  // $scope.posts = [
+  //   {title: 'post 1', upvotes: 5},
+  //   {title: 'post 2', upvotes: 3},
+  //   {title: 'post 3', upvotes: 22},
+  //   {title: 'post 4', upvotes: 8},
+  //   {title: 'post 5', upvotes: 12}
+  // ];
   $scope.addPost = function(){
     if(!$scope.title || $scope.title === ''){
       return;
@@ -40,4 +41,6 @@ function($scope){
     post.upvotes +=1;
   };
 
+  //experiment
+  $scope.posts = posts.posts; //Binding $scope.posts variable in controller to posts array in our service
 }]);
